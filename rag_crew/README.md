@@ -21,12 +21,13 @@ graph TD
     D --> E[Summary Creation Task];
     E --> F[summary.md];
     
-    style A fill:#FFE4B5,stroke:#333
-    style B fill:#87CEEB,stroke:#333
-    style C fill:#98FB98,stroke:#333
-    style D fill:#87CEEB,stroke:#333
-    style E fill:#98FB98,stroke:#333
-    style F fill:#FFB6C1,stroke:#333
+    style A fill:#000000,stroke:#000000
+style B fill:#000000,stroke:#000000
+style C fill:#000000,stroke:#000000
+style D fill:#000000,stroke:#000000
+style E fill:#000000,stroke:#000000
+style F fill:#000000,stroke:#000000
+
 ```
 
 1.  The process starts with user input specifying the topic to research.
