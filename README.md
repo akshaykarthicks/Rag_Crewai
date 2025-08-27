@@ -1,6 +1,7 @@
 # RagCrew: PDF Summarization Crew
 
 Welcome to RagCrew, a multi-agent AI system powered by [crewAI](https://crewai.com) that automates the process of reading and summarizing PDF documents. This project leverages the power of AI agents to extract key insights from PDF files and generate comprehensive summaries.
+<img width="1450" height="379" alt="image" src="https://github.com/user-attachments/assets/96b49131-a715-40ec-be72-84ecd377bb5b" />
 
 ## Overview
 
