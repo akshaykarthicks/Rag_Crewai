@@ -1,0 +1,21 @@
+pdf_reader_task:
+  description: >
+    Analyze the provided PDF document on {topic}.
+    Your goal is to extract the most critical information, including key insights, emerging trends, and future outlooks.
+    The current year is {current_year}.
+  expected_output: >
+    A comprehensive summary of the PDF's content, including a list of key insights and trends, 
+    and a brief analysis of the future outlook for {topic}.
+    The output should be a structured report that the reporting_analyst can use.
+  agent: Pdf_reader
+
+pdf_summarizer_task:
+  description: >
+    Using the research summary provided by the Pdf_reader, create a detailed and polished final report on {topic}.
+    Expand on the key insights and trends, providing additional context and analysis.
+  expected_output: >
+    A well-structured and comprehensive report in markdown format.
+    The report should have a clear introduction, detailed sections for each key insight and trend, 
+    and a concluding summary of the future outlook.
+    It should be ready for publication.
+  agent: Pdf_summarizer

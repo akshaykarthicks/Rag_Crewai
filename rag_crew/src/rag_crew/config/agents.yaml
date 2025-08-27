@@ -1,0 +1,52 @@
+pdf_reader_task:
+  description: >
+    Analyze the provided PDF document on {topic} for the year {current_year}.
+    Extract the most critical information including key insights, emerging trends, and future outlooks.
+  expected_output: >
+    A structured research summary including:
+      - Key insights (bullet points)
+      - Emerging trends
+      - Future outlook
+  inputs:
+    - pdf_file
+    - topic
+    - current_year
+  outputs:
+    - research_summary
+  agent: Pdf_reader
+
+pdf_summarizer_task:
+  description: >
+    Using the research summary from Pdf_reader, create a comprehensive report on {topic}.
+    Expand on the key insights and trends, adding analysis and context.
+  expected_output: >
+    A polished markdown report including:
+      - Introduction
+      - Key Insights
+      - Emerging Trends
+      - Future Outlook
+      - Conclusion
+  inputs:
+    - research_summary
+    - topic
+  outputs:
+    - final_report
+  agent: Pdf_summarizer
+
+Pdf_reader:
+  role: >
+    {topic} Senior Data Researcher
+  goal: >
+    Extract and structure key insights, trends, and future outlooks from PDF research.
+  backstory: >
+    A seasoned researcher skilled in analyzing documents and highlighting the most relevant insights in {topic}.
+  llm: gemini/gemini-1.5-flash
+
+Pdf_summarizer:
+  role: >
+    {topic} Senior Reporting Analyst
+  goal: >
+    Transform structured research into a well-written, publication-ready report.
+  backstory: >
+    A meticulous analyst who turns complex research into clear, actionable, and professional reports.
+  llm: gemini/gemini-1.5-flash
